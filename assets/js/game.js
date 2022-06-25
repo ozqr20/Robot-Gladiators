@@ -1,26 +1,23 @@
+// Game States
+// "WIN" - Player robot has defeated all enemy-robots
+//    * Fight all enemy-robots
+
+
+
+
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-// You can also log multiple values at once like this
-
 console.log(playerName, playerAttack,playerHealth);
 
-var enemyName = "Robocop";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAtack = 12;
 
 
-/* Another way to create a function by passing a value to it 
-
-var fight = function() {
-    window.alert("Welcome to Robot Gladiators!");
-};
-*/
-
-
-function fight() {
+  var fight = function(enemyName) {
     window.alert("Welcome to Robot Gladiators!");
         var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
@@ -69,7 +66,7 @@ function fight() {
                 playerMoney = playerMoney - 2;
 
             } else {
-                fight();
+               // fight();
             }
 
         } else {
@@ -79,4 +76,6 @@ function fight() {
 
 };
 
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
