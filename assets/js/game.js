@@ -24,7 +24,7 @@ var fight = function(enemy){
     }
 
     if (promptFight == "fight" || promptFight == "FIGHT"){
-            // generate random damage value based on player's attack power
+            // generate random damage value based on player's attack power.
             var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
             enemy.health = Math.max(0, enemy.health - damage);
@@ -159,7 +159,7 @@ var shop = function() {
 
 };    
 
-// function to generate a random numeric value
+// function to generate a random numeric VALUE
 var randomNumber = function(min,max) {
     var value = Math.floor(Math.random() * (max - min + 1) + min);
   
